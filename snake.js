@@ -36,8 +36,8 @@ let food = {
     y : Math.floor(Math.random()*15+3) * box
 }
 
-// szybkość snake'a -> 120 ms
-let game = setInterval(draw,120);
+// szybkość snake'a -> 300 ms
+let game = setInterval(draw,300);
 
 // kontrolowanie snake'a
 let d;
@@ -118,6 +118,11 @@ function draw(){
         clearInterval(game);
         //tutaj pewnie najlepiej pobrać punkty
 
+	//komunikat o przegranej
+        ctx.fillStyle = "white";
+        ctx.font = "45px Changa one";
+        ctx.fillText("GAME OVER",5*box, 11*box);
+	    
         //tu bierzemy playAgain po 5 sekundach
         setTimeout(playAgain, 5000);
 
@@ -135,5 +140,5 @@ function playAgain() {
         x : 9 * box,
         y : 10 * box
     };
-    game = setInterval(draw,120);
+    game = setInterval(draw,300);
 }
