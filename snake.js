@@ -11,6 +11,13 @@ Co do playAgain, na razie gra automatycznie się playAgainuje po 5 sekundach od 
 przycisk mimo najszczerszych chęci mnie pokonał na razie
  */
 
+//zapobieganie przewijania strony podczas klikania strzałek
+window.addEventListener("keydown", function(e) {
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 // tworzenie planszy
 const box = 32;
 
