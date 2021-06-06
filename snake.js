@@ -1,6 +1,7 @@
 const cvs = document.getElementById("snake");
 const ctx = cvs.getContext("2d");
 document.addEventListener("keydown",direction);
+	const button = document.getElementById('playAgainButton');
 /*
 Co do pobrania punktów do bazy, podejrzewam, że najlepiej wziąć je
 z draw() (gdy sprawdzamy, czy jest koniec gry)
@@ -131,7 +132,7 @@ function draw(){
         ctx.fillText("GAME OVER",5*box, 11*box);
 	    
         //tu bierzemy playAgain po 5 sekundach
-        setTimeout(playAgain, 5000);
+        //setTimeout(playAgain, 5000);
 
     }
     snake.unshift(newHead);
@@ -149,3 +150,4 @@ function playAgain() {
     };
     game = setInterval(draw,300);
 }
+button.onclick = playAgain;
