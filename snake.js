@@ -148,6 +148,7 @@ function playAgain() {
         x : 9 * box,
         y : 10 * box
     };
+    clearInterval(game);
     game = setInterval(draw,300);
 }
 button.onclick = playAgain;
