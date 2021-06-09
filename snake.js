@@ -126,6 +126,9 @@ function draw(){
         clearInterval(game);
         //tutaj pewnie najlepiej pobrać punkty
 
+	    if(getAccessToken())
+		saveScore(snake.length, "snake");
+	    
 	//komunikat o przegranej
         ctx.fillStyle = "white";
         ctx.font = "45px Changa one";
