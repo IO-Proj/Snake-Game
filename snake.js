@@ -127,7 +127,7 @@ function draw(){
         //tutaj pewnie najlepiej pobrać punkty
 
 	    if(getAccessToken())
-		saveScore(snake.length, "snake");
+		saveScore(score, "snake");
 	    
 	//komunikat o przegranej
         ctx.fillStyle = "white";
